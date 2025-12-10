@@ -44,9 +44,9 @@ addButtons.forEach(button => {
         }
 
         updateSummary();
+        renderCart();
     });
 });
-
 
 
 function renderCart() {
@@ -63,6 +63,8 @@ function renderCart() {
         li.textContent = `${item.name} — $${item.price}  (Qty: ${item.qty})`;
         cartList.appendChild(li);
     });
+
+      updateSummary();
 }
 
 
@@ -88,4 +90,9 @@ function renderCart() {
 emptyCartBtn.addEventListener("click", () => {
     cart =[];
    
+    updateSummary();
+    renderCart();
 });
+
+renderCart();
+updateSummary();
