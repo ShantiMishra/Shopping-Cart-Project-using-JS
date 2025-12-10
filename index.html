@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+         <h2>Shop Stationary</h2>
+
+        <div class="card-container">
+            <div id="card1" class="card">
+                <span class="product-name">Bag</span>
+                <span class="product-price">$50.0</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div id="card2" class="card">
+                <span class="product-name">Notes Decor</span>
+                <span class="product-price">$20.0</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div id="card3" class="card">
+                <span class="product-name">Pen Set</span>
+                <span class="product-price">$43.0</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div id="card4" class="card">
+                <span class="product-name">Book Marks</span>
+                <span class="product-price">$2.0</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+       <div id="cart-section">
+        <h2>Your Cart</h2>
+      <div id="cart-empty" class="muted">Your cart is empty</div>
+
+      <ul id="cart-list"></ul>
+
+      <div id="cart-summary" class="summary">
+        <p id="items-count">Items in cart: 0</p>
+        <p id="subtotal">Subtotal: $0.00</p>
+        <p id="discount">Discount: -$0.00</p>
+        <p id="final-total"><strong>Final Total: $0.00</strong></p>
+        <p id="discount-tier" class="muted">No discount applied</p>
+      </div>
+
+      <div class="cart-actions">
+        <button id="empty-cart">Empty Cart</button>
+      </div>
+       </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

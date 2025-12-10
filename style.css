@@ -1,0 +1,163 @@
+/* body{
+    
+    align-items: center;
+    justify-content: centre;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aquamarine; */
+/* } */
+
+/* .card{
+    background-color: bisque;
+    height: 10rem;
+    width: 15rem;
+    margin: 5px;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}  */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 220px;
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.price {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card button {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    background: #2d8cf0;
+    color: white;
+}
+
+.card button[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px dashed #e6e6e6;
+    padding: 8px 0;
+}
+
+.cart-item .name {
+    flex: 1;
+}
+
+.cart-item .price {
+    width: 90px;
+    text-align: right;
+}
+
+.qty-controls {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.qty-controls button {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.qty-controls button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.badge {
+    background: #ffb400;
+    color: #111;
+    padding: 3px 6px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.summary {
+    margin-top: 10px;
+}
+
+.muted {
+    color: #666;
+}
+
+.cart-actions {
+    margin-top: 10px;
+}
+
+#empty-cart {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #ff4d4f;
+    color: white;
+    cursor: pointer;
+}
+
+#empty-cart:hover {
+    opacity: 0.95;
+}
