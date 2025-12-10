@@ -43,10 +43,47 @@ addButtons.forEach(button => {
             });
         }
 
-        renderCart();
         updateSummary();
     });
 });
+
+
+
+function renderCart() {
+    cartList.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartEmpty.style.display = "block";
+    } else {
+        cartEmpty.style.display = "none";
+    }
+
+    cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} — $${item.price}  (Qty: ${item.qty})`;
+        cartList.appendChild(li);
+    });
+}
+
+
+
+ function updateSummary() {
+
+    let subtotal = 0;
+    let itemTotal = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.qty;
+        itemTotal += item.qty;
+    });
+
+    itemsCount.textContent = "Items in cart: " + itemTotal;
+    subtotalText.textContent = "Subtotal: $" + subtotal.toFixed(2);
+
+    discountText.textContent = "Discount: $0.00";
+    finalTotalText.innerHTML = "<strong>Final Total: $" + subtotal.toFixed(2) + "</strong>";
+    discountTierText.textContent = "No discount applied";
+}
 
 emptyCartBtn.addEventListener("click", () => {
     cart =[];
